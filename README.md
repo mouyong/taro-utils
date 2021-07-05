@@ -14,12 +14,51 @@ yarn add we-validator
 ```
 
 ```javascript pages/index/index.jsx
+import Taro from "@tarojs/taro";
+import { useState } from "react";
+import { View, Text } from "@tarojs/components";
 import {
   ClMessage,
+  ClTitleBar,
+  ClStep,
+  ClLayout,
+  ClCard,
+  ClTabBar,
+  ClForm,
+  ClFormItem,
+  ClInput,
+  ClSelect,
+  ClRadio,
+  ClButton,
+  ClTextarea,
 } from "mp-colorui";
-
 import * as WeValidator from "../../utils/validator";
+import "./index.scss";
 
+const steps = [
+  {
+    title: "个人信息",
+  },
+  {
+    title: "报名信息",
+  },
+  {
+    title: "学习进度",
+  },
+];
+
+const defaultTabs = [
+  {
+    badge: false,
+    icon: "home",
+    title: "首页",
+  },
+  {
+    badge: false,
+    icon: "my",
+    title: "我的",
+  },
+];
 
 const validator = WeValidator.makeValidator(
   {
