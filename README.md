@@ -2,6 +2,8 @@
 
 ```
 git subtree add -P src/utils/ https://github.com/mouyong/taro-utils.git master
+
+yarn add we-validator
 ```
 
 ## 使用
