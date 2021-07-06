@@ -36,7 +36,7 @@ export const getRegionData = (province, city) => {
   return [provinceArrData, cityArrData, districtArrData];
 };
 
-export const getAreaDataByString = (address) => {
+export const getAreaDataFromString = (address) => {
   const addressArr = address.split(",");
 
   if (!address || addressArr.length !== 3) {
